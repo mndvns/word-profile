@@ -5,7 +5,7 @@ Takes an english word and returns its phoneme, syllables, parts of speech, and i
 ## Usage
 
 ```
-import word from word'
+import word from 'word-profile'
 
 word('stuff')
 ```
