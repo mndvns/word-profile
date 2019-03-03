@@ -1,0 +1,28 @@
+{
+  "name": "word-profile",
+  "private": "true",
+  "description": "deconstruct english words",
+  "main": "lib/index.js",
+  "author": "Michael Vanasse",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/ttsc --pretty",
+    "build:watch": "yarn run --silent build --watch",
+    "test": "./node_modules/.bin/mocha --colors --timeout 5000",
+    "test:watch": "./node_modules/.bin/chokidar 'lib/**.js' 'test/*' --silent --initial --command 'yarn run --silent test'",
+    "start": "./node_modules/.bin/run-p --silent --print-label *:watch",
+    "clean": "rm -rf *.log *.lock node_modules lib"
+  },
+  "devDependencies": {
+    "@types/node": "^11.10.4",
+    "chokidar-cli": "^1.2.2",
+    "mocha": "^6.0.2",
+    "npm-run-all": "^4.1.3",
+    "run-p": "^0.0.0",
+    "ttypescript": "^1.5.6",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "pronounceable": "^1.0.1"
+  }
+}
